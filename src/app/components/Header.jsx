@@ -59,9 +59,9 @@ export default function Header() {
                     md:flex-row 
                     md:bg-transparent`} 
                     >
-                    {links.map((link)=>{
+                    {links.map((link,index)=>{
                         const {href,label}=link;
-                        return <li className='hover:text-orange-500 transition 
+                        return <li key={index} className='hover:text-orange-500 transition 
                         relative underline-link whitespace-nowrap'><Link href={href}>{label}</Link></li>
                     })}
                 </ul>
